@@ -1,0 +1,132 @@
+{
+  "dfc_unit": [
+    {
+      "d": [1, "kitchen"],
+      "f": [2, "make lunch"],
+      "c": [
+        [3, "stack items in dish washer"],
+        [4, "check left over"],
+        [5, "falafel take out for falafel day"],
+        [6, "make toast"]
+      ]
+    },
+    {
+      "d": [3, "Washroom"],
+      "f": [5, "wash clothes"],
+      "c": [
+        [27, "get detergents"],
+        [28, "sort clothes by colour"],
+        [29, "put to wash a colour pile"]
+      ]
+    },
+    {
+      "d": [1, "kitchen"],
+      "f": [1, "items in kitchen has to be washed after cooking"],
+      "c": [
+        [1, "collect items"],
+        [2, "rinse items", 2]
+      ]
+    },
+
+    {
+      "d": [3, "Washroom"],
+      "f": [3, "stack items in dish washer"],
+      "c": [
+        [7, "stack big pots"],
+        [8, "stack small items"],
+        [9, "start machine if full or urgent"]
+      ]
+    },
+    {
+      "d": [3, "Washroom"],
+      "f": [3, "stack items in dish washer"],
+      "c": [
+        [7, "stack big pots"],
+        [8, "stack small items"],
+        [9, "start machine if full or urgent"]
+      ]
+    },
+    {
+      "d": [3, "Washroom"],
+      "f": [4, "Dry the clothes"],
+      "c": [
+        [10, "clothes put in the liners"],
+        [11, "put clothes in dryer"]
+      ]
+    },
+
+    {
+      "d": [5, "Studies"],
+      "f": [7, "skill study"],
+      "c": [
+        [21, "cloud certify"],
+        [22, "write principles"]
+      ]
+    },
+    {
+      "d": [2, "Bathroom"],
+      "f": [9, "have shower"],
+      "c": [
+        [23, "shave"],
+        [24, "cleanup"],
+        [25, "hair treat"]
+      ]
+    }
+  ],
+  "d_en": {
+    "Kitchen": 1,
+    "Bathroom": 2,
+    "Washroom": 3,
+    "Sports": 4,
+    "Studies": 5
+  },
+  "f_en": {
+    "items in kitchen has to be washed after cooking": 1,
+    "make lunch": 2,
+    "stack items in dish washer": 3,
+    "Dry the clothes": 4,
+    "wash clothes": 5,
+    "work-study": 6,
+    "skill study": 7,
+    "make food: (kitchen:)make lunch": 8,
+    "have shower": 9
+  },
+  "c_en": {
+    "collect items": 1,
+    "rinse items": 2,
+    "stack items in dish washer": 3,
+    "check left over": 4,
+    "falafel take out for falafel day": 5,
+    "make toast": 6,
+    "stack big pots": 7,
+    "stack small items": 8,
+    "start machine if full or urgent": 9,
+    "clothes put in the liners": 10,
+    "put clothes in dryer": 11,
+    "sunday hockey": 12,
+    "monday swimming": 13,
+    "put clothes away": 14,
+    "wash clothes": 15,
+    "study physics": 16,
+    "study art": 17,
+    "study computing": 18,
+    "daily yoga": 19,
+    "shower": 20,
+    "cloud certify": 21,
+    "write principles": 22,
+    "shave": 23,
+    "cleanup": 24,
+    "hair treat": 25,
+    "skin treat": 26,
+    "get detergents": 27,
+    "sort clothes by colour": 28,
+    "put to wash a colour pile": 29
+  },
+  "a": {
+    "d": "activity location",
+    "f": "f:daily cores",
+    "c": "in  action",
+    "r": "live in sync "
+  },
+  "p": "Ordinary Life"
+}

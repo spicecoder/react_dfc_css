@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+.main-list-container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.grid-context-container {
+  width: 95%;
+  margin: auto;
+}
+.view {
+  width: 95%;
+  margin: auto;
+}
+.grid-domain-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  background: #7a95b0;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid-flow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #1d3e6e;
+  color: #fff;
+}
+.grid-entity-list {
+  width: 100%;
+  background-color: #8db046;
+  display: flex;
+  overflow-x: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* shared css */
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+.items h4 {
+  width: 180px;
+}
+.button-container {
+  height: 30px;
+  margin-left: 10px;
+}
+.button-container button {
+  margin: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.entity {
   display: flex;
   flex-direction: column;
+  min-height: 200px;
+  min-width: 300px;
+  margin: 2px 2px;
+  border: 3px solid #1d3e6e;
+}
+.entity h4 {
+  height: 130px;
+  width: 100%;
+  color: #fff;
+  padding: 5px 5px 5px 5px;
+  overflow: auto;
+}
+.entity-button-container {
+  height: 30px;
+  margin-left: 10px;
+}
+/* media query */
+@media (max-width: 768px) {
+  .grid-context-container {
+    width: 330px;
+    margin: auto;
+  }
+  .grid-flow-container {
+    display: flex;
+    justify-content: start;
+  }
+}
+
+/* list view */
+
+.list-context-container {
+  width: 330px;
+}
+
+.list-domain-container {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  background: #7a95b0;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.list-flow-container {
+  align-items: center;
+  width: 100%;
+  background: #1d3e6e;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-entity-list {
+  width: 330px;
+  height: 210px;
+  background-color: #8db046;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
