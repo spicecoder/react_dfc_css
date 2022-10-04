@@ -1,0 +1,108 @@
+<html>
+<style>
+* container defines margins and width */
+.container {
+    margin: 60px 120px 0;
+}
+
+/* outer container will define aspect ratio */
+.outer {
+    position: relative;
+    width: 100%;
+}
+
+.outer.r4x3 {
+    padding-top: 75%; /* "height" will be 3/4 of width */
+}
+
+.outer.r2x1 {
+    padding-top: 50%; /* "height" will be 1/2 of width */
+}
+
+/* inner container positioned absolutely and holds content */
+.outer .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: 1px solid grey;
+}
+
+/* example content */
+.little-box {
+    float: left;
+    outline: 1px solid steelblue;
+    width: 25%;
+    height: 33.333%;
+}
+
+/* just for display purposes... */
+.inner::after {
+    content: attr(data-size);
+    position: absolute;
+    left:0;
+    top: -1em;
+}
+
+
+</style>
+
+ <div class="inner">
+            <div class="little-box">A</div>
+            <div class="little-box">B</div>
+            <div class="little-box">C</div>
+            <div class="little-box">D</div>
+            <div class="little-box">A</div>
+            <div class="little-box">B</div>
+            <div class="little-box">C</div>
+            <div class="little-box">D</div>
+            <div class="little-box">A</div>
+            <div class="little-box">B</div>
+            <div class="little-box">C</div>
+            <div class="little-box">D</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="outer r2x1">
+        <div class="inner">
+            <div class="little-box">A</div>
+            <div class="little-box">B</div>
+            <div class="little-box">C</div>
+            <div class="little-box">D</div>
+            <div class="little-box">A</div>
+            <div class="little-box">B</div>
+            <div class="little-box">C</div>
+            <div class="little-box">D</div>
+            <div class="little-box">A</div>
+            <div class="little-box">B</div>
+            <div class="little-box">C</div>
+            <div class="little-box">D</div>
+        </div>
+    </div>
+</div>
+
+<script>
+// this javascript is simply to display the size of the box
+// you'll see some rounding errors from the percentage calculation in CSS
+
+$(window).on('resize', function(){
+
+    $('.inner').each(function(){
+
+        var box = $(this);        
+        var width = box.width();
+        var height = box.height();        
+        
+        box.attr('data-size', width+'x'+height+' (r5: '+(width/height).toFixed(2)+')');
+
+    });
+}).trigger('resize');
+
+
+</script>
+</html>
+
+<!-- https://wellcaffeinated.net/articles/2012/12/10/very-simple-css-only-proportional-resizing-of-elements--->
